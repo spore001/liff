@@ -106,10 +106,16 @@
     }
 
     async function main() {
-      // alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1657684264-87nM9N67" })
-      getEnvironment()
-      getUserProfile()
+      liff.permission.query("profile").then((permissionStatus) => {
+        alert(permissionStatus)
+      })
+
+
+      // alert("LINE Developers x Skooldio")
+      // await liff.init({ liffId: "1657684264-87nM9N67" })
+      // getEnvironment()
+      // getUserProfile()
       // getContext()
       // getFriendship()
       // createUniversalLink()
