@@ -72,18 +72,19 @@
     }
 
     async function getUserProfile() {
-      // const profile = await liff.getProfile()
+      const profile = await liff.getProfile()
+      alert(JSON.stringify(profile))
 
-      liff
-        .getProfile()
-        .then((profile) => {
-          const name = profile.displayName;
-          alert(123)
-          alert(name)
-        })
-        .catch((err) => {
-          alert(JSON.stringify(err))
-        });
+      // liff
+      //   .getProfile()
+      //   .then((profile) => {
+      //     const name = profile.displayName;
+      //     alert(123)
+      //     alert(name)
+      //   })
+      //   .catch((err) => {
+      //     alert(JSON.stringify(err))
+      //   });
       // document.getElementById("pictureUrl").src = profile.pictureurl
       // document.getElementById("userId").append(profile.userId)
       // document.getElementById("statusMessage").append(profile.statusMessage)
