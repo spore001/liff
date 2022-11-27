@@ -106,9 +106,18 @@
 
     async function main() {
       await liff.init({ liffId: "1657684264-87nM9N67" })
-      liff.permission.query("profile").then((permissionStatus) => {
-        alert(JSON.stringify(permissionStatus))
-      })
+      // liff.permission.query("profile").then((permissionStatus) => {
+      //   alert(JSON.stringify(permissionStatus))
+      // })
+      liff
+        .getProfile()
+        .then((profile) => {
+          const name = profile.displayName;
+          alert(name)
+        })
+        .catch((err) => {
+          alert(JSON.stringify(err))
+        });
 
 
       // alert("LINE Developers x Skooldio")
