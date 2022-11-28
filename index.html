@@ -155,11 +155,13 @@
       //   });
       
       document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      getFriendship()
-      // createUniversalLink()
+      if (liff.isLoggedIn()){
+        getEnvironment()
+        getUserProfile()
+        getContext()
+        getFriendship()
+        // createUniversalLink()
+      }
     }
     main()
   </script>
