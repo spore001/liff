@@ -73,8 +73,6 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile()
-      alert(JSON.stringify(profile))
-
       // liff
       //   .getProfile()
       //   .then((profile) => {
@@ -85,10 +83,10 @@
       //   .catch((err) => {
       //     alert(JSON.stringify(err))
       //   });
-      // document.getElementById("pictureUrl").src = profile.pictureurl
-      // document.getElementById("userId").append(profile.userId)
-      // document.getElementById("statusMessage").append(profile.statusMessage)
-      // document.getElementById("displayName").append(profile.displayName)
+      document.getElementById("pictureUrl").src = profile.pictureurl
+      document.getElementById("userId").append(profile.userId)
+      document.getElementById("statusMessage").append(profile.statusMessage)
+      document.getElementById("displayName").append(profile.displayName)
     }
 
     function getEnvironment() {
@@ -120,11 +118,7 @@
       //   .catch((err) => {
       //     alert(JSON.stringify(err))
       //   });
-
-
-      // alert("LINE Developers x Skooldio")
-      // await liff.init({ liffId: "1657684264-87nM9N67" })
-      // getEnvironment()
+      getEnvironment()
       getUserProfile()
       // getContext()
       // getFriendship()
