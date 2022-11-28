@@ -68,15 +68,15 @@
     async function sendMsg() {
       if (liff.getContext().type !== "none"){
         await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": "446",
-            "packageId": "1988"
-          },
+          // {
+          //   "type": "sticker",
+          //   "stickerId": "446",
+          //   "packageId": "1988"
+          // },
           {
             "type":"text",
             "text":"สวัสดี นี่คือการส่งจาก liff นะเจ้าหมูตอน"
-        },
+          }
         ])
         alert("Message sent")
       }
